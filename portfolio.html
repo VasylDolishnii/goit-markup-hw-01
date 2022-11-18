@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppGo</title>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="contentBox">
+        <div class="label">WorldFood Poland - 5-7 kwietnia</div>
+        <div class="content">
+          <p>Data 12 marca</p>
+          <p>
+            To już pewne! Targi WorldFood Poland powracają<br />
+            (stacjonarnie) po dwuletniej przerwie. Zapraszamy do<br />
+            odwiedzenia sektora NutraFood – strefy spotkań<br />
+            specjalistów z branży suplementów diety i żywności<br />
+            funkcjonalnej. My też tam będziemy! Spotkajmy się przy<br />
+            stoisku N11 (hala 2) w miłej i bezpiecznej atmosferze.<br />
+            Nasz zespół intensywnie pracuje nad przygotowaniami i<br />
+            nową odsłoną marki. Chętnie porozmawiamy o aktualnych<br />
+            regulacjach branżowych oraz odpowiemy na wszelkie<br />
+            pytania dotyczące surowców czy też trendów w<br />
+            suplementach diety. Zapraszamy do bezpłatnej rejestracji<br />
+            online, wpisując kod „6W3E”.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="contentBox">
+        <div class="label">WorldFood Poland - 5-7 kwietnia</div>
+        <div class="content">
+          <p>Data 12 marca</p>
+          <p>
+            To już pewne! Targi WorldFood Poland powracają<br />
+            (stacjonarnie) po dwuletniej przerwie. Zapraszamy do<br />
+            odwiedzenia sektora NutraFood – strefy spotkań<br />
+            specjalistów z branży suplementów diety i żywności<br />
+            funkcjonalnej. My też tam będziemy! Spotkajmy się przy<br />
+            stoisku N11 (hala 2) w miłej i bezpiecznej atmosferze.<br />
+            Nasz zespół intensywnie pracuje nad przygotowaniami i<br />
+            nową odsłoną marki. Chętnie porozmawiamy o aktualnych<br />
+            regulacjach branżowych oraz odpowiemy na wszelkie<br />
+            pytania dotyczące surowców czy też trendów w<br />
+            suplementach diety. Zapraszamy do bezpłatnej rejestracji<br />
+            online, wpisując kod „6W3E”.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="contentBox">
+        <div class="label">WorldFood Poland - 5-7 kwietnia</div>
+        <div class="content">
+          <p>Data 12 marca</p>
+          <p>
+            To już pewne! Targi WorldFood Poland powracają<br />
+            (stacjonarnie) po dwuletniej przerwie. Zapraszamy do<br />
+            odwiedzenia sektora NutraFood – strefy spotkań<br />
+            specjalistów z branży suplementów diety i żywności<br />
+            funkcjonalnej. My też tam będziemy! Spotkajmy się przy<br />
+            stoisku N11 (hala 2) w miłej i bezpiecznej atmosferze.<br />
+            Nasz zespół intensywnie pracuje nad przygotowaniami i<br />
+            nową odsłoną marki. Chętnie porozmawiamy o aktualnych<br />
+            regulacjach branżowych oraz odpowiemy na wszelkie<br />
+            pytania dotyczące surowców czy też trendów w<br />
+            suplementach diety. Zapraszamy do bezpłatnej rejestracji<br />
+            online, wpisując kod „6W3E”.
+          </p>
+        </div>
+      </div>
+    </div>
+    <style>
+      .accordion {
+        width: 800px;
+      }
+      .contentBox {
+        position: relative;
+        margin: 10px 20px;
+      }
+      .label {
+        position: relative;
+        padding: 10px;
+        cursor: pointer;
+        width: 702px;
+        height: 66px;
+        background: linear-gradient(248.61deg, #ffffff 31.07%, rgba(252, 254, 252, 0.79) 84.07%);
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        font-size: 30px;
+      }
+      .label::before {
+        content: '∨';
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(-50%);
+        font-size: 1.5rem;
+      }
+      .content {
+        width: 702px;
+        position: relative;
+        font-size: 16px;
+        background: linear-gradient(248.61deg, #ffffff 31.07%, rgba(252, 254, 252, 0.79) 84.07%);
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: auto;
+      }
+      .contentBox.active .content {
+        height: 520px;
+        padding: 10px;
+        width: 702px;
+        border-radius: 0 0 15px 15px;
+      }
+
+      .contentBox.active .label {
+        padding: 10px;
+        width: 702px;
+        border-radius: 15px 15px 0 0;
+        box-shadow: 3px 0px 4px rgba(0, 0, 0, 0.25);
+      }
+      .contentBox.active .label::before {
+        content: '∧';
+      }
+    </style>
+    <script>
+      const accordion = document.getElementsByClassName('contentBox');
+      for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+        });
+      }
+    </script>
+  </body>
+</html>
